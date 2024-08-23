@@ -5,19 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".app.homefragment.HomeFragment">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout android:id="@+id/linearHeader"
+        <LinearLayout
+            android:id="@+id/linearHeader"
             android:layout_gravity="top|start"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
             style="@style/groupStylebluegray_9011">
-            <LinearLayout android:id="@+id/linearRowsettings"
+
+            <LinearLayout
+                android:id="@+id/linearRowsettings"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="59dp"
                 android:layout_marginStart="23dp"
@@ -38,7 +41,7 @@
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_marginStart="239dp"
+                    android:layout_marginStart="219dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView android:id="@+id/imageSettings1"
@@ -95,7 +98,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
 
 
@@ -105,11 +108,23 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:layout_marginTop="30dp"
-                        style="@style/txtCheckButton"
+                        style="@style/txtCheckButton1"
+                        android:id="@+id/checkIn"
                         android:layout_height="47dp"/>
+
+
+
+                    <ProgressBar
+                        android:progressBackgroundTint="@color/blue"
+                        android:visibility="gone"
+                        android:id="@+id/progressbar"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:text="Check Out"
+                        android:id="@+id/checkout"
                         android:layout_width="250dp"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -150,6 +165,7 @@
                                 android:layout_height="wrap_content"/>
 
                             <TextView
+                                android:id="@+id/location"
                                 android:layout_marginTop="20dp"
                                 style="@style/txtpoppinmedium14"
                                 android:text="New cozy PG , 5th Phase , JP Nagar,\n Bangalore, 560078"
