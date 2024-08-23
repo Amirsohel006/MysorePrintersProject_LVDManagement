@@ -39,7 +39,7 @@
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_marginStart="239dp"
+                    android:layout_marginStart="219dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView android:id="@+id/imageSettings1"
@@ -110,6 +110,7 @@
                         android:drawablePadding="8dp" />
 
                     <Spinner
+                        android:id="@+id/spinnerPlantDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Choose"
@@ -136,6 +137,7 @@
                         android:drawablePadding="8dp" />
 
                     <Spinner
+                        android:id="@+id/spinnerEditDescription"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -163,11 +165,12 @@
                         android:drawablePadding="8dp" />
 
                     <EditText
+                        android:id="@+id/editTextDate"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Auto Capture"
-                        android:text="Auto Capture"
+                        android:text=""
                         style="@style/txtinterbold17"
                         android:padding="8dp"
                         android:background="@drawable/edit_text_background"
@@ -193,10 +196,11 @@
                         android:drawablePadding="8dp" />
 
                     <EditText
+                        android:id="@+id/editTextLPRTime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Enter"
-                        android:text="Enter"
+                        android:text=""
                         android:padding="8dp"
                         android:layout_marginTop="10dp"
                         style="@style/txtinterbold17"
@@ -222,6 +226,7 @@
 
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submitButton"
                     android:text="Submit"
                     android:layout_width="150dp"
                     android:gravity="center"
