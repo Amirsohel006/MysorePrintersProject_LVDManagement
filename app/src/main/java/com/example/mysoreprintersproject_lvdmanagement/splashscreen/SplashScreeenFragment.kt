@@ -5,13 +5,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.mysoreprintersproject.network.RemoteDataSource
+import com.example.mysoreprintersproject_lvdmanagement.network.RemoteDataSource
 import com.example.mysoreprintersproject_lvdmanagement.R
 import com.example.mysoreprintersproject_lvdmanagement.homecontainer.HomeContainerActivity
 import com.example.mysoreprintersproject_lvdmanagement.network.AuthApi

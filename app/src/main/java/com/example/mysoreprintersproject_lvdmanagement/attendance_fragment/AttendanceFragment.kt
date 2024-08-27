@@ -54,6 +54,9 @@ class AttendanceFragment:
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        val km=sessionManager.fetchKm()
+        binding.totalkmtravelled.text="Kilometer Travelled :$km"
+
         navigationView = binding.navigationView
 
         navigationView.setNavigationItemSelectedListener { item ->

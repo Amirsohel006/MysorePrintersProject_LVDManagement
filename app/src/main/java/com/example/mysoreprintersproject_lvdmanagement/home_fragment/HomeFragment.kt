@@ -1,5 +1,6 @@
 package com.example.mysoreprintersproject_lvdmanagement.home_fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -17,6 +18,7 @@ import com.example.mysoreprintersproject_lvdmanagement.network.SessionManager
 import com.example.mysoreprintersproject_lvdmanagement.responses.AttendanceGraph
 import com.example.mysoreprintersproject_lvdmanagement.responses.LVDDashboard
 import com.example.mysoreprintersproject_lvdmanagement.responses.ProfileResponses
+import com.example.mysoreprintersproject_lvdmanagement.splashscreen.SplashScreenActivity
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
@@ -81,7 +83,7 @@ class HomeFragment :Fragment(R.layout.fragment_home) {
         }
 
         navigationView.setNavigationItemSelectedListener { item ->
-//            when (item.itemId) {
+            when (item.itemId) {
 //                R.id.nav_dashboard -> startActivity(Intent(requireActivity(), HomeContainerActivity::class.java))
 //                R.id.nav_attendance -> startActivity(Intent(requireActivity(), AttendanceActivity::class.java))
 //                R.id.nav_work_summary -> startActivity(Intent(requireActivity(), DailyWorkingSummaryActivity::class.java))
@@ -90,14 +92,14 @@ class HomeFragment :Fragment(R.layout.fragment_home) {
 //                R.id.nav_collections_report -> startActivity(Intent(requireActivity(), DailyCollectionActivity::class.java))
 //                R.id.nav_supply_reports -> startActivity(Intent(requireActivity(), SupplyReportActivity::class.java))
 //                R.id.nav_net_sales_report -> startActivity(Intent(requireActivity(), NetSaleActivity::class.java))
-//                R.id.nav_logout ->{
-//                    sessionManager.logout()
-//                    sessionManager.clearSession()
-//                    startActivity(Intent(requireActivity(),SplashScreenActivity::class.java))
-//                    requireActivity().finishAffinity()
-//                }
+                R.id.nav_logout ->{
+                    sessionManager.logout()
+                    sessionManager.clearSession()
+                    startActivity(Intent(requireActivity(), SplashScreenActivity::class.java))
+                    requireActivity().finishAffinity()
+                }
 //                else -> Log.d("NavigationDrawer", "Unhandled item clicked: ${item.itemId}")
-//            }
+            }
             drawerLayout.closeDrawers()
             true
         }
@@ -186,6 +188,7 @@ class HomeFragment :Fragment(R.layout.fragment_home) {
                     val dashboardResponses = response.body()
                     if (dashboardResponses != null) {
                         val totalHoursWorked = dashboardResponses.totalHoursWorked
+                        sessionManager.saveKm(dashboardResponses.totalDistance!!)
                         if (totalHoursWorked != null) {
                             // Split the string into hours and minutes
                             val timeParts = totalHoursWorked.split(":")
