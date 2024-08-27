@@ -1,4 +1,4 @@
-package com.example.mysoreprintersproject.network
+package com.example.mysoreprintersproject_lvdmanagement.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".app.homefragment.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <RelativeLayout
@@ -40,7 +39,7 @@
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_marginStart="219dp"
+                    android:layout_marginStart="269dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageView android:id="@+id/imageSettings1"
@@ -54,16 +53,16 @@
                         tools:src="@drawable/notification_icon"/>
 
 
-                    <ImageView android:id="@+id/imageSettings2"
-                        android:layout_height="30dp"
-                        android:layout_marginStart="13dp"
-                        android:layout_marginBottom="1dp"
-                        android:layout_marginTop="1dp"
-                        android:layout_width="35dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/profile_image"
-                        tools:ignore="ContentDescription"
-                        tools:src="@drawable/profile_image"/>
+<!--                    <ImageView android:id="@+id/imageSettings2"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginStart="13dp"-->
+<!--                        android:layout_marginBottom="1dp"-->
+<!--                        android:layout_marginTop="1dp"-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/profile_image"-->
+<!--                        tools:ignore="ContentDescription"-->
+<!--                        tools:src="@drawable/profile_image"/>-->
                 </LinearLayout>
 
             </LinearLayout>
@@ -101,15 +100,15 @@
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/ic_profile" />
 
-                    <ImageView
-                        android:id="@+id/edit_profile_image"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_alignEnd="@id/profile_image"
-                        android:layout_alignBottom="@id/profile_image"
-                        android:src="@drawable/ic_edit"
-                        android:background="@drawable/rounded_corner_background"
-                        android:padding="4dp" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/edit_profile_image"-->
+<!--                        android:layout_width="24dp"-->
+<!--                        android:layout_height="24dp"-->
+<!--                        android:layout_alignEnd="@id/profile_image"-->
+<!--                        android:layout_alignBottom="@id/profile_image"-->
+<!--                        android:src="@drawable/ic_edit"-->
+<!--                        android:background="@drawable/rounded_corner_background"-->
+<!--                        android:padding="4dp" />-->
 
                     <TextView
                         android:id="@+id/profile_name"
